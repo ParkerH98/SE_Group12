@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-sm-6">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Start Time</mat-label>
+        <input matInput placeholder="2021-01-15" [(ngModel)]="startTime">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Latitude</mat-label>
+        <input matInput placeholder="Ex. Pizza" [(ngModel)]="latitude">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Longitude</mat-label>
+        <input matInput placeholder="Ex. Pizza" [(ngModel)]="longitude">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-6">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Max Radius km</mat-label>
+        <input matInput placeholder="Ex. Pizza" [(ngModel)]="maxRadiusKM">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Min Magnitude</mat-label>
+        <input matInput placeholder="Ex. Pizza" [(ngModel)]="minMagnitude">
+      </mat-form-field>
+    </div>
+
+    <div class="col-sm-6">
+      <button mat-raised-button color="primary" (click)="callApi()">Submit</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <span>Earthquake Count: {{count}}</span>
+  </div>
+
+  <div class="row">
+
+    <div class="col mb-5" *ngFor="let earthquake of featureProperties;" id="concert-card">
+      <mat-card class="postiton-relative outline">
+
+        <mat-card-header class="position-relative">
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title class="fs-5">{{earthquake.place}}</mat-card-title>
+          <mat-card-subtitle> Magnitude {{earthquake.mag}} </mat-card-subtitle>
+
+          <!-- <mat-card-subtitle> {{earthquake.place}} <mat-icon>location</mat-icon> -->
+
+        </mat-card-header>
+
+        <mat-card-content>
+
+
+          <mat-card-actions id="card-actions">
+            <button mat-raised-button color=primary>More Info</button>
+          </mat-card-actions>
+
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+
+  </div>
+
+  <h3>Raw JSON:</h3>
+  <br>
+  <p>{{stringResponse}}</p>
+
+</div>
