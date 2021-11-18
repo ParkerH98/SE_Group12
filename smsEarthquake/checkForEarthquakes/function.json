@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 */10 * * * *"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "contacts",
+      "databaseName": "smsearthquake",
+      "collectionName": "contact",
+      "connectionStringSetting": "useme_DOCUMENTDB"
+    },
+    {
+      "type": "twilioSms",
+      "direction": "out",
+      "name": "messages",
+      "accountSidSetting": "TwilioAccountSid",
+      "authTokenSetting": "TwilioAuthToken",
+      "from": "+19727892951"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+POST http://localhost:7071/api/formsSubmit
+Content-Type: application/json
+
+{
+    "phoneNum": "1-405-308-9428",
+    "lat": 12.12,
+    "long": 100.11,
+    "radius": 200,
+    "magnitude": 3.5
+}`
