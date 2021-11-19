@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Source Code Pro", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main {
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  background-color: #2e3440;
+  color: #eceff4;
+}
+
+.main-container {
+  margin: 0 0.7em;
+}
+
+.main-header {
+  margin-bottom: 3.5rem;
+}
+
+.main-header h2 {
+  font-size: 1.3em;
+}
+
+.tan {
+  color: #ebcb8b;
+}
+
+.form {
+  margin-top: 1em;
+  width: 100%;
+  font-size: 0.8em;
+}
+.input-phoneNum,
+.input-mag,
+.input-radius,
+.input-lat,
+.input-long {
+  height: 2rem;
+  padding: 0.5em 1.5em;
+  font-size: 0.9em;
+  border-radius: 5em;
+  border: 0;
+  outline: 0;
+  margin-bottom: 1.3em;
+  font-family: inherit;
+  width:20pc;
+}
+
+.submit-button {
+  font-size: 1em;
+  height: 2em;
+  border: 0;
+  border-radius: 5rem;
+  width: 50%;
+  outline: 0;
+  font-family: inherit;
+  background-color: #ebcb8b;
+  margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.main-header h1,
+.form h2,
+.form h3 {
+  margin-block-end: 0.5em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 10;
+  padding: 10;
+  overflow: hidden;
+  background-color: #2e3440;
+  position: relative;
+  top: 0;
+  width: 100%;
+  font-size: .5em;
+}
+
+li {
+  float: left;
+  margin:0rem 1rem;
+  font-weight: bold;
+}
+
+li a{
+  display: block;
+  color: #eceff4;
+  text-align: center;
+  padding: auto;
+  text-decoration: none;
+  
+}
+
+li a:hover {
+  background-color: #ebcb8b;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse:collapse;
+  padding: 5px;
+  border-bottom: 1px solid #eceff4;
+  
+}
+th {
+  height: 20px;
+  background-color: cadetblue;
+}
+
+.table-hour,
+.table-day,
+.table-week {
+  margin: 2rem;
+}

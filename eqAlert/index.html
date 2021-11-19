@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Alert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="main">
+        <div class="nav">
+            <ul>
+                <li><a href="#text">Text Alert</a></li>
+                <li><a href="#hour">Earthquakes Past Hour</a></li>
+                <li><a href="#day">Past Day</a></li>
+                <li><a href="#week">Past Week</a></li>
+              </ul>
+        </div>
+       <div class="main-container">
+            <header class="main-header">
+                <a name="text"></a>
+                <h1>
+                    <span class="tan">sms</span>Earthquake Alert
+                </h1>
+                <h2>Enter your phone number and other criteria to recieve notifications</h2>
+            </header>
+            <div class="form">
+                <form id="formsub">    
+                    <input type="text" id="phoneNum" class="input-phoneNum" placeholder="phone number" autocomplete="off"></input>
+                    <input type="text" id="mag" class="input-mag" placeholder="minimum magnitude" autocomplete="off"></input><br>
+                    <input type="text" id="radius" class="input-radius" placeholder="radius (miles)" autocomplete="off"></input>
+                    <input type="text" id="lat" class="input-lat" placeholder="latitude" autocomplete="off"></input>
+                    <input type="text" id="long" class="input-long" placeholder="longitude" autocomplete="off"></input><br>
+                    <button id="submit-button" class="submit-button" onclick="getEarthquakes();">submit</button>
+                </form>
+            </div>
+            <div class="table-hour">
+                <a name="hour"></a>
+                <h1>Earthquakes in the Past Hour</h1>
+                <table class="table">
+                    <tr class="eq-info">
+                        <th>Magnitude</th>
+                        <th>Place</th>
+                        <th>Time</th>
+                        <th>Longitude</th>
+                        <th>Latitude</th>
+                        <th>Depth (Km)</th>
+                    </tr>
+                    <tbody id="hourData">
+            
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-day">
+                <a name="day"></a>
+                <h1>Earthquakes in the Past Day</h1>
+                <table class="table">
+                    <tr class="eq-info">
+                        <th>Magnitude</th>
+                        <th>Place</th>
+                        <th>Time</th>
+                        <th>Longitude</th>
+                        <th>Latitude</th>
+                        <th>Depth (Km)</th>
+                    </tr>
+                    <tbody id="dayData">
+            
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-week">
+                <a name="week"></a>
+                <h1>Earthquakes in the Past Week</h1>
+                <table class="table">
+                    <tr class="eq-info">
+                        <th>Magnitude</th>
+                        <th>Place</th>
+                        <th>Time</th>
+                        <th>Longitude</th>
+                        <th>Latitude</th>
+                        <th>Depth (Km)</th>
+                    </tr>
+                    <tbody id="weekData">
+            
+                    </tbody>
+                </table>
+            </div>
+       </div>
+    </div>
+</body>
+</html>
+<script src="bc.js" type="text/javascript"></script>
+<script src="eqCheck.js" type="text/javascript"></script>
